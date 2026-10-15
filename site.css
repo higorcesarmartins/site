@@ -1,0 +1,268 @@
+:root {
+    color-scheme: light;
+    --ink: #203631;
+    --muted: #62736d;
+    --green: #176b5b;
+    --green-dark: #123e37;
+    --coral: #d36d50;
+    --canvas: #f3f6f3;
+    --paper: #ffffff;
+    --line: #dce5df;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.site-header {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
+    width: min(1120px, 100% - 48px);
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    color: var(--green-dark);
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand span {
+    color: var(--coral);
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+#menu a {
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: var(--muted);
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+#menu a:hover,
+#menu a:focus-visible,
+#menu a[aria-current="page"] {
+    background: #e8f1ed;
+    color: var(--green-dark);
+}
+
+main {
+    width: min(1000px, 100% - 48px);
+    margin: 0 auto;
+    padding: 38px 0 72px;
+}
+
+h1, h2, h3 {
+    color: var(--green-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 38px;
+}
+
+h2 {
+    margin: 38px 0 12px;
+    font-size: 27px;
+}
+
+h3 {
+    margin: 8px 0;
+    font-size: 21px;
+}
+
+p, li {
+    max-width: 78ch;
+}
+
+p {
+    margin: 0 0 18px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+
+.page-systems img {
+    width: 160px;
+    height: 145px;
+    object-fit: contain;
+    padding: 10px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+}
+
+.intro-band {
+    margin: -38px calc((100vw - min(1000px, 100vw - 48px)) / -2) 38px;
+    padding: 58px max(24px, calc((100vw - 1000px) / 2));
+    background: var(--green-dark);
+    color: #f7fbf8;
+}
+
+.intro-band h1 {
+    max-width: 700px;
+    margin: 8px 0 14px;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+.intro-band p {
+    max-width: 660px;
+    margin-bottom: 0;
+    color: #d7e5df;
+    font-size: 18px;
+}
+
+.eyebrow {
+    color: #f1b49f !important;
+    font-size: 12px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    margin-top: 0;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.topic-card {
+    min-height: 174px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--green);
+    border-radius: 4px;
+    background: var(--paper);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.topic-card:hover,
+.topic-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--green);
+}
+
+.topic-number {
+    color: var(--coral);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.topic-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.byline {
+    margin-top: 34px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+}
+
+@media (max-width: 680px) {
+    .nav-wrap {
+        width: min(100% - 32px, 1120px);
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #menu {
+        gap: 2px;
+    }
+
+    #menu a {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+
+    main {
+        width: min(100% - 32px, 1000px);
+        padding-top: 28px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .intro-band {
+        margin: -28px -16px 30px;
+        padding: 42px 20px;
+    }
+
+    .intro-band h1 {
+        font-size: 38px;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-card {
+        min-height: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
